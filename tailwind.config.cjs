@@ -22,6 +22,8 @@ module.exports = {
     },
     colors: {
       transparent: "transparent",
+      violet: "#7048e8",
+      white: "#ffffff",
     },
     spacing: {
       "0": "0px",
