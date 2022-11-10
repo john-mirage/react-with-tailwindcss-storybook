@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+/* eslint-disable @typescript-eslint/no-var-requires */
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 const pxToRem = (px) => {
@@ -6,7 +7,7 @@ const pxToRem = (px) => {
     return `${String(px / 16)}rem`;
   }
   throw new Error("The pixels value must be a number");
-}
+};
 
 module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
@@ -18,7 +19,7 @@ module.exports = {
       "lg": "992px",
       "xl": "1200px",
       "2xl": "1400px",
-      "hover-device": { "raw": "(hover: hover)" },
+      "hover-device": { raw: "(hover: hover)" },
     },
     colors: {
       transparent: "transparent",
@@ -59,16 +60,22 @@ module.exports = {
       "128": pxToRem(128),
     },
     fontSize: ({ theme }) => ({
-      "heading": [theme("spacing[24]"), {
-        lineHeight: theme("spacing[32]"),
-        letterSpacing: "0",
-        fontWeight: "700",
-      }],
-      "body": [theme("spacing[16]"), {
-        lineHeight: theme("spacing[24]"),
-        letterSpacing: "0",
-        fontWeight: "400",
-      }],
+      heading: [
+        theme("spacing[24]"),
+        {
+          lineHeight: theme("spacing[32]"),
+          letterSpacing: "0",
+          fontWeight: "700",
+        },
+      ],
+      body: [
+        theme("spacing[16]"),
+        {
+          lineHeight: theme("spacing[24]"),
+          letterSpacing: "0",
+          fontWeight: "400",
+        },
+      ],
     }),
     extend: {
       fontFamily: {
@@ -79,7 +86,5 @@ module.exports = {
   corePlugins: {
     aspectRatio: false,
   },
-  plugins: [
-    require("@tailwindcss/aspect-ratio"),
-  ],
+  plugins: [require("@tailwindcss/aspect-ratio")],
 };
