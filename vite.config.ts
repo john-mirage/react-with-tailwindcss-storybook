@@ -10,8 +10,8 @@ export default defineConfig({
     alias: {
       "@components": resolve(__dirname, "src/components"),
       "@images": resolve(__dirname, "src/images"),
+      "@storybookConfig": resolve(__dirname, ".storybook"),
       "@test": resolve(__dirname, "src/test"),
-      "@utils": resolve(__dirname, "src/utils"),
     },
   },
   test: {

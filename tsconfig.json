@@ -19,11 +19,11 @@
     "paths": {
       "@components/*": ["src/components/*"],
       "@images/*": ["src/images/*"],
+      "@storybookConfig/*": [".storybook/*"],
       "@test/*": ["src/test/*"],
-      "@utils/*": ["src/utils/*"]
     },
     "types": ["vitest/globals"]
   },
-  "include": ["src"],
+  "include": ["src", ".storybook"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
