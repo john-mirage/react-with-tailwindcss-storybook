@@ -20,7 +20,6 @@
       "@components/*": ["src/components/*"],
       "@images/*": ["src/images/*"],
       "@storybookConfig/*": [".storybook/*"],
-      "@test/*": ["src/test/*"],
     },
     "types": ["vitest/globals"]
   },
