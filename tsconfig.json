@@ -23,6 +23,6 @@
     },
     "types": ["vitest/globals"]
   },
-  "include": ["src", ".storybook"],
+  "include": ["src", ".storybook", "jest.setup.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
